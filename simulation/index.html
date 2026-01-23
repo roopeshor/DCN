@@ -1,16 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<script src="./index.js" defer></script>
+	<script src="./setup.js" defer></script>
+	<script src="./drawUtils.js" defer></script>
 	<script src="./node.js" defer></script>
-	<script src="./draw.js" defer></script>
+	<script src="./index.js" defer></script>
+	<style>
+		svg {
+			background-color: black;
+		}
+
+		svg line {
+			stroke-width: 1.5px;
+		}
+
+		svg text {
+			font-family: "arial";
+			dominant-baseline: middle;
+			text-anchor: middle;
+			user-select: none;
+		}
+	</style>
 </head>
+
 <body>
-	<canvas id="cvs"></canvas>
+	<svg xmlns="http://www.w3.org/2000/svg">
+		<defs>
+			<marker id="arrow" markerWidth="7.5" markerHeight="7.5" refX="3.75" refY="3.75" orient="auto" fill="context-stroke">
+				<path d="M 0 0 L 7.5 3.75 L 0 7.5 z" />
+			</marker>
+		</defs>
+	</svg>
 	<br><button style="padding: 10px;" id="startBtn">start</button>
 	<br><button style="padding: 10px;" id="nextBtn">Next</button>
 </body>
+
 </html>
